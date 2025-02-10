@@ -6,11 +6,11 @@ const TagList = () => {
 
   useEffect(() => {
     const fetchTags = async () => {
-      await delay(500);
+      // await delay(500);
       setTags(["tag1", "tag2", "tag3"]);
     };
     fetchTags();
-  });
+  }, [tags]);
 
   return (
     <ul>
