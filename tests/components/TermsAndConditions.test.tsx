@@ -11,6 +11,7 @@ describe("Terms And Conditions", () => {
       heading: screen.getByRole("heading"),
     };
   };
+
   it("should render with correct text and initial state", () => {
     const { heading, checkbox, button } = renderComponent();
     expect(heading).toHaveTextContent(/Terms & Conditions/i);
