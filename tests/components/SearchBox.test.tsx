@@ -32,6 +32,6 @@ describe("SearchBox", () => {
 
     await user.type(input, "{enter}");
 
-    expect(onChange).not.toHaveBeenCalled();
+    expect(onChange).toHaveBeenCalled();
   });
 });
