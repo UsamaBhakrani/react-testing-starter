@@ -8,6 +8,13 @@ export const handlers = [
       { id: 3, name: "Gardening" },
     ]);
   }),
+  http.get("/products", () => {
+    return HttpResponse.json([
+      { id: 1, name: "Laptop" },
+      { id: 2, name: "Headphones" },
+      { id: 3, name: "Pot" },
+    ]);
+  }),
 ];
 
 export type Handler = {
