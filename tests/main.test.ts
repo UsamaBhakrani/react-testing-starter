@@ -1,11 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { it, expect, describe } from "vitest";
-import { Handler } from "./mocks/handlers";
+import { db } from "./mocks/db";
 
 describe("group", () => {
   it("should", async () => {
-    const response = await fetch("/categories");
-    const data = (await response.json()) as Handler;
-    console.log(data);
-    expect(data).toHaveLength(3);
+    const product = db.product.create({ name: "Apple" });
+    console.log(db.product.delete({ where: { id: { equals: product.id } } }));
   });
 });
